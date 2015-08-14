@@ -4,8 +4,6 @@
  */
 
 
-#define BUFSIZE 256
-
 int main(int argc, char* argv[]) {
     QApplication myApp(argc, argv);
     QWidget* myWidget = new QWidget();
