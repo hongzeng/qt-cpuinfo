@@ -32,7 +32,8 @@ int main(int argc, char* argv[]) {
     }
 
     close (input_fd);
-    QString cpuInfoDisplay = new QString(buffer);
+    QString cpuInfoDisplay;
+    cpuInfoDisplay = buffer;
     QLabel *myLabel = new QLabel(cpuInfoDisplay,myWidget); //display it
     myLabel->setGeometry(10, 10, 80, 30);
     QPushButton* myQuitButton = new QPushButton("Quit", myWidget);
@@ -40,6 +41,6 @@ int main(int argc, char* argv[]) {
     QObject::connect(myQuitButton, SIGNAL(clicked()), &myApp, SLOT(quit());
     myapp.setMainWidget( myWidget );
     myWidget->show();
-    return myApp.exec();
+    return myApp.exec(); 
 }
 
